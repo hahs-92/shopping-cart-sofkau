@@ -3,9 +3,8 @@ import { phones } from '../data'
 
 export function getPhones (){
     return new Promise((res, rej) =>{
-
-        setTimeout(() => res({...phones}), 1000);
-    });
+        setTimeout(() => res(phones), 1000);
+    })
 
 }
 
@@ -21,6 +20,6 @@ export function setInCart({id, inCart}){
                 }
         }
         res()
-        }, 500);
+        }, 500)
     })
 }

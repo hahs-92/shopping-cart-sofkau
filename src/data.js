@@ -1,22 +1,32 @@
-export const phones = {
-    Techno:{
-        marca: "Techno",
-        inCart: 'falso' // o "en"
+export const phones = [
+    {
+        brand: "Techno",
+        price: 4000,
+        inCart: false,
+        count: 3
     },
-    Apple:{
-        marca: "Iphone",
-        inCart: "falso"
+    {
+        brand: "Iphone",
+        price: 4500,
+        inCart: false,
+        count: 5
     },
-    Samsung:{
-        marca: "Samsung" ,
-        inCart: "falso"
+    {
+        brand: "Samsung",
+        price: 6500,
+        inCart: false,
+        count: 2
     },
-    Hauwei:{
-        marca: "Hauwei",
-        inCart: "verdadero"
+    {
+        brand: "Hauwei",
+        price: 6000,
+        inCart: false,
+        count: 4
     },
-    HTC:{
-        marca: "HTC",
-        inCart: "verdadero"
+    {
+        brand: "HTC",
+        price: 4500,
+        inCart: false,
+        count: 2
     }
-}
+]

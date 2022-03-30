@@ -1,11 +1,11 @@
 import './App.css';
 //components
-import { ShoppingCart } from './components/ShoppingCart'
+import { Home } from './containers/Home'
 
 function App() {
   return (
     <div className="App">
-      <ShoppingCart />
+      <Home />
     </div>
   )
 }

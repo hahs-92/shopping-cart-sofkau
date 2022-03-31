@@ -22,9 +22,6 @@ export const ListProducts = () => {
         getInitialData()
     },[])
 
-    console.log("data: ", phones)
-    console.log("acrt: ", myCart)
-
     return (
         <section>
             {
@@ -35,12 +32,11 @@ export const ListProducts = () => {
                             id={ phone.id }
                             brand={ phone.brand}
                             price={ phone.price}
-                            count={ phone.count}
+                            image={phone.image}
                         />
                     ))
-                    : <h2>Loading..,</h2>
+                    : <h2>Loading...</h2>
             }
         </section>
-
     )
 }

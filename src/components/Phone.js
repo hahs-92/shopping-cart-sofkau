@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux"
 //actions
 import { addToCart } from '../actions'
 
-export const Phone = ({id, brand, price }) => {
+export const Phone = ({id, brand, price, image }) => {
   const dispatch = useDispatch()
   const [{isDragging}, drag] = useDrag(() => ({
     type: "article",
@@ -26,8 +26,13 @@ export const Phone = ({id, brand, price }) => {
   return (
 
     <article ref={drag} >
-      <h2>{brand}</h2>
-      <p>{price}</p>
+      <section>
+        <img src={image} alt={brand} />
+      </section>
+      <section>
+        <h2>{brand}</h2>
+        <p>{price}</p>
+      </section>
       <button
         onClick={handleOnCLick}
       >Add to cart

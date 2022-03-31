@@ -17,6 +17,7 @@ export const MyCartContainer = () => {
                                 id={ phone.id}
                                 brand={phone.brand}
                                 price={phone.price}
+                                image={phone.image}
                             />
                     ))
                     : <h2>add a phone</h2>

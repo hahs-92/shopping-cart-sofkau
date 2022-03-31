@@ -1,0 +1,44 @@
+.Header {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    height: 12rem;
+    background-color: var(--primary-color);
+}
+
+.Icon {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.Icon img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.Cart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    height: 100%;
+}
+
+.Cart span {
+    color: white;
+}
+
+.Cart img {
+    width: 4rem;
+    height: 4rem;
+}
+
+
+@media (min-width: 767px) {
+    .Cart {
+        visibility: hidden;
+        opacity: 0;
+    }
+}

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { removeToCart } from '../actions'
 
 
-export const MyCart = ({id, brand, price}) => {
+export const MyCart = ({id, brand, price, image}) => {
   const dispatch = useDispatch()
 
   return (
@@ -13,7 +13,7 @@ export const MyCart = ({id, brand, price}) => {
         <span>{ price}</span>
       </section>
       <section>
-        <button onClick={() => dispatch(removeToCart({id,brand, price}))}>
+        <button onClick={() => dispatch(removeToCart({id,brand, price, image}))}>
           Remove
         </button>
       </section>

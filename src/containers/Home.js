@@ -11,12 +11,12 @@ export const Home = () => {
        <main>
             <Header />
 
-            <DndProvider backend={HTML5Backend}>
+            {/* <DndProvider backend={HTML5Backend}>
                 <ListProducts />
                 <ShoppingCart />
             </DndProvider>
 
-            <MyCartContainer />
+            <MyCartContainer /> */}
        </main>
     )
 }

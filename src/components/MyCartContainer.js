@@ -1,13 +1,26 @@
+import { useSelector } from 'react-redux'
 //components
-import { Phone } from '../components/Phone'
-//data
-import { ge} from '../data'
+import { MyCart } from './MyCart'
+
 
 export const MyCartContainer = () => {
+    const myCart = useSelector(state => state.myCart)
 
     return (
-        <section>
-
+        <section >
+            {
+                myCart.length
+                    ?
+                    myCart.map(phone => (
+                            <MyCart
+                                key={phone.id }
+                                id={ phone.id}
+                                brand={phone.brand}
+                                price={phone.price}
+                            />
+                    ))
+                    : <h2>add a phone</h2>
+            }
         </section>
     )
 }

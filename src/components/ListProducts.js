@@ -7,6 +7,7 @@ import { Phone } from './Phone'
 
 export const ListProducts = () => {
     const phones = useSelector(state => state.phones)
+    const myCart = useSelector(state => state.myCart)
     const dispatch = useDispatch()
 
     const getInitialData = async() => {
@@ -21,6 +22,8 @@ export const ListProducts = () => {
         getInitialData()
     },[])
 
+    console.log("data: ", phones)
+    console.log("acrt: ", myCart)
 
     return (
         <section>
@@ -29,6 +32,7 @@ export const ListProducts = () => {
                     ? phones.map(phone => (
                         <Phone
                             key={phone.brand}
+                            id={ phone.id }
                             brand={ phone.brand}
                             price={ phone.price}
                             count={ phone.count}

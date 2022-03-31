@@ -1,7 +1,22 @@
-import React from 'react'
+import { useDispatch } from 'react-redux'
+//actions
+import { removeToCart } from '../actions'
 
-export const MyCart = () => {
+
+export const MyCart = ({id, brand, price}) => {
+  const dispatch = useDispatch()
+
   return (
-    <div>MyCart</div>
+    <article>
+      <section>
+        <h3>{ brand }</h3>
+        <span>{ price}</span>
+      </section>
+      <section>
+        <button onClick={() => dispatch(removeToCart({id,brand, price}))}>
+          Remove
+        </button>
+      </section>
+    </article>
   )
 }

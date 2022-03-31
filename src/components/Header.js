@@ -5,8 +5,12 @@ import style from '../styles/components/header.module.css'
 import icon from '../assets/phone-call.png'
 import cartIcon from '../assets/shopping-cart.png'
 
-export const Header = () => {
+export const Header = ({setIsShow, isShow}) => {
     const myCart = useSelector(state => state.myCart)
+
+    const handle = () => {
+        console.log("click")
+    }
 
     return (
         <header className={style.Header}>
@@ -14,7 +18,11 @@ export const Header = () => {
                 <img src={icon} alt="icon" />
             </section>
             <section className={ style.Cart }>
-                <img src={ cartIcon} alt="cartShopping" />
+                <img
+                    src={ cartIcon}
+                    alt="cartShopping"
+                    onClick={() => setIsShow(!isShow)}
+                />
                 <span>{ myCart.length }</span>
             </section>
         </header>

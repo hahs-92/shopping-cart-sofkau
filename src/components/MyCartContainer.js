@@ -5,11 +5,11 @@ import { MyCart } from './MyCart'
 import style from '../styles/components/myCartContainer.module.css'
 
 
-export const MyCartContainer = () => {
+export const MyCartContainer = ({isShow}) => {
     const myCart = useSelector(state => state.myCart)
 
     return (
-        <section className={ style.MyCartContainer}>
+        <section className={`${ !isShow ? style.MyCartContainer : style.isShow }`}>
             {
                 myCart.length
                     ?
@@ -22,7 +22,7 @@ export const MyCartContainer = () => {
                                 image={phone.image}
                             />
                     ))
-                    : <h2>add a phone</h2>
+                    : <h2>Add a phone to your cart</h2>
             }
         </section>
     )

@@ -2,7 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    transition: all .5s ease-in;
 }
+
 
 @media (min-width: 1039px) {
     .HomeWrapper {

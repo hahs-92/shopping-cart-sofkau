@@ -7,20 +7,22 @@ import { MyCartContainer } from '../components/MyCartContainer'
 import { ShoppingCart } from '../components/ShoppingCart'
 //styles
 import style from '../styles/pages/home.module.css'
+import { useState } from 'react'
 
 
 export const Home = () => {
+    const [isShow, setIsShow] = useState(false)
     return (
        <div className={ style.Home }>
-            <Header />
+            <Header setIsShow={setIsShow} isShow={isShow}/>
 
             <main className={ style.HomeWrapper }>
                 <DndProvider backend={HTML5Backend}>
                     <ListProducts />
-                    <ShoppingCart />
+                    <ShoppingCart/>
                 </DndProvider>
 
-                <MyCartContainer />
+                <MyCartContainer isShow={isShow}/>
             </main>
        </div>
     )

@@ -1,0 +1,20 @@
+.ShoppingCart {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+}
+
+@media (min-width: 1039px) {
+    .ShoppingCart {
+        grid-area: 2 / 2 / 3 / 3;
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2rem;
+        height: 100%;
+        border: 2px dashed var(--complementary-color);
+        width: 100%;
+    }
+}

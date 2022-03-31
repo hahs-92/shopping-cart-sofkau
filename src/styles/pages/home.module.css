@@ -1,0 +1,15 @@
+.HomeWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (min-width: 1039px) {
+    .HomeWrapper {
+        display: grid;
+        grid-template:  1fr 1fr / 30% 70%;
+        padding: 2rem;
+        height: 100%;
+        max-height: calc( 100vh - 120px);
+    }
+}

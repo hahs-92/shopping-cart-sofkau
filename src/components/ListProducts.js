@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getPhonesAction } from '../actions'
 //components
 import { Phone } from './Phone'
+//syles
+import style from '../styles/components/listProducts.module.css'
 
 export const ListProducts = () => {
     const phones = useSelector(state => state.phones)
@@ -23,10 +25,10 @@ export const ListProducts = () => {
     },[])
 
     return (
-        <section>
+        <section className={ style.ListProducts }>
             {
                 phones.length
-                    ? phones.map(phone => (
+                    && phones.map(phone => (
                         <Phone
                             key={phone.brand}
                             id={ phone.id }
@@ -35,7 +37,6 @@ export const ListProducts = () => {
                             image={phone.image}
                         />
                     ))
-                    : <h2>Loading...</h2>
             }
         </section>
     )

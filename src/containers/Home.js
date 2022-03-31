@@ -5,18 +5,23 @@ import { Header } from '../components/Header'
 import { ListProducts } from '../components/ListProducts'
 import { MyCartContainer } from '../components/MyCartContainer'
 import { ShoppingCart } from '../components/ShoppingCart'
+//styles
+import style from '../styles/pages/home.module.css'
+
 
 export const Home = () => {
     return (
-       <main>
+       <div className={ style.Home }>
             <Header />
 
-            {/* <DndProvider backend={HTML5Backend}>
-                <ListProducts />
-                <ShoppingCart />
-            </DndProvider>
+            <main className={ style.HomeWrapper }>
+                <DndProvider backend={HTML5Backend}>
+                    <ListProducts />
+                    <ShoppingCart />
+                </DndProvider>
 
-            <MyCartContainer /> */}
-       </main>
+                <MyCartContainer />
+            </main>
+       </div>
     )
 }

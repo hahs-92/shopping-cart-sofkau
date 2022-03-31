@@ -1,0 +1,16 @@
+.ListProducts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem 0;
+    margin-top: 3rem;
+    width: 90%;
+}
+
+@media (min-width: 1039px) {
+    .ListProducts {
+        grid-area: 1 / 2 / 2 / 3;
+        width: 100%;
+        gap: 2rem 4rem;
+    }
+}

@@ -1,13 +1,15 @@
 import { useSelector } from 'react-redux'
 //components
 import { MyCart } from './MyCart'
+//styles
+import style from '../styles/components/myCartContainer.module.css'
 
 
 export const MyCartContainer = () => {
     const myCart = useSelector(state => state.myCart)
 
     return (
-        <section >
+        <section className={ style.MyCartContainer}>
             {
                 myCart.length
                     ?

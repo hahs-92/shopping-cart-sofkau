@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../actions'
 //components
 import { Phone } from './Phone'
+//styles
+import style from '../styles/components/shoppingCart.module.css'
 
 export const ShoppingCart = () => {
     const dispatch = useDispatch()
@@ -19,7 +21,7 @@ export const ShoppingCart = () => {
 
 
     return (
-        <section ref={drop}>
+        <section ref={drop} className={ style.ShoppingCart }>
             {
                 myCart.length && myCart.map(phone => (
                     <Phone
@@ -27,10 +29,10 @@ export const ShoppingCart = () => {
                         id={phone.id}
                         brand={phone.brand}
                         price={phone.price}
+                        image={ phone.image }
                     />
                 ))
             }
-
         </section>
     )
 }
